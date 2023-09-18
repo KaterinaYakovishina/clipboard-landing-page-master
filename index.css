@@ -1,0 +1,301 @@
+* {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Green: hsl(171, 66%, 44%);
+    --Blue: hsl(233, 100%, 69%);
+    --Dark: hsl(210, 10%, 33%);
+    --Grayish: hsl(201, 11%, 66%);
+    --icons: #4C545C;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-image: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    gap: 6rem;
+    flex-direction: column;
+}
+
+header {
+    padding-top: 6rem;
+}
+
+.section,
+.wrapper,
+footer {
+    display: flex;
+    padding-block: 3rem;
+}
+
+.btns {
+    display: flex;
+    padding-block: 2rem;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.general,
+.companies,
+.narrow {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.companies {
+    justify-content: center;
+}
+
+.narrow {
+    margin-inline: 26%;
+    gap: 2rem;
+}
+
+.mini-narrow,
+.narrow {
+    flex-direction: column;
+}
+
+.left {
+    padding-block: 2rem;
+    max-width: 27rem;
+    min-width: 23rem;
+}
+
+.full-width {
+    gap: 6rem;
+}
+
+.full-width-inline,
+footer {
+    padding-inline: 10%;
+}
+
+.full-width-inline {
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 8rem;
+}
+
+.btns {
+    gap: 1.5rem;
+}
+
+.general>img {
+    margin-bottom: 2rem;
+}
+
+/* footer */
+footer {
+    flex-direction: row;
+    gap: 1rem;
+    background-color: hsl(180, 3%, 94%);
+}
+
+.icons,
+.logo {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.icons {
+    justify-content: flex-end;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex: 3
+}
+
+.icons {
+    flex: 2;
+}
+
+.logo {
+    flex: 1;
+}
+
+ul {
+    column-count: 3;
+    column-gap: 5rem;
+}
+
+li {
+    list-style-type: none;
+    line-height: 2.5;
+}
+
+
+/* styling */
+h1,
+h2,
+h3 {
+    color: var(--Dark);
+    line-height: 1.25;
+}
+
+p {
+    color: var(--Grayish);
+    line-height: 1.75;
+}
+
+button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-family: var(--font);
+    font-size: 18px;
+    color: white;
+}
+
+
+.icon {
+    fill: #4C545C;
+}
+
+/* buttons left and right */
+.ios {
+    transition: all.1s ease-in;
+    background-color: var(--Green);
+    box-shadow: 2px 3px 10px hsla(171, 66%, 44%, 0.678);
+}
+
+.mac {
+    transition: all.1s ease-in;
+    background-color: var(--Blue);
+    box-shadow: 2px 3px 10px hsl(233, 100%, 69%, 0.678);
+}
+
+li:hover {
+    color: var(--Green);
+    cursor: pointer;
+}
+
+.ios:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 30px hsla(171, 66%, 44%, 0.678);
+}
+
+.mac:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 30px hsl(233, 100%, 69%, 0.678);
+}
+
+.icon:hover {
+    fill: var(--Green);
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    .btns,
+    footer,
+    .section,
+    .wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    ul {
+        column-count: 2;
+    }
+
+    .img-computer,
+    .img-devices {
+        width: 100%;
+    }
+
+    .left {
+        padding-right: unset;
+        text-align: center;
+    }
+
+    .companies {
+        margin-block: 1rem 2rem;
+    }
+
+    .article {
+        min-width: 23rem;
+        justify-content: center;
+    }
+
+    footer {
+        gap: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    ul {
+        column-count: auto;
+        text-align: left;
+    }
+
+    button {
+        min-width: 23rem;
+    }
+
+    header,
+    .section {
+        margin-inline: unset;
+    }
+
+    .section,
+    footer {
+        padding-inline: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        background-image: url(./images/bg-header-mobile.png);
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    footer>* {
+        min-width: 23rem;
+        justify-content: center;
+    }
+
+    .icons {
+        justify-content: center;
+    }
+
+    .full-width {
+        gap: 1rem;
+    }
+
+    .full-width-inline {
+        gap: 3rem;
+    }
+
+}
